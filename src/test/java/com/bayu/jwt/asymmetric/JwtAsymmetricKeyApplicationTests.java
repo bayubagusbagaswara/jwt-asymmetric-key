@@ -1,10 +1,10 @@
-package com.bayu.demo;
+package com.bayu.jwt.asymmetric;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class JwtAsymmetricKeyApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.bayu.demo;
+package com.bayu.jwt.asymmetric;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class JwtAsymmetricKeyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(JwtAsymmetricKeyApplication.class, args);
 	}
 
 }
