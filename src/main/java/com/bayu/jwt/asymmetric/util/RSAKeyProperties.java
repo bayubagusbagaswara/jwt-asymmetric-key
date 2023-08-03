@@ -12,7 +12,7 @@ public class RSAKeyProperties {
     private RSAPublicKey publicKey;
     private RSAPrivateKey privateKey;
 
-    public RSAKeyProperties(RSAPublicKey publicKey, RSAPrivateKey privateKey) {
+    public RSAKeyProperties() {
         KeyPair pair = KeyGeneratorUtility.generateRsaKey();
         this.publicKey = (RSAPublicKey) pair.getPublic();
         this.privateKey = (RSAPrivateKey) pair.getPrivate();
