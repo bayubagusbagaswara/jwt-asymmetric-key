@@ -1,8 +1,6 @@
 package com.bayu.jwt.asymmetric.controller;
 
-import com.bayu.jwt.asymmetric.dto.ApiResponse;
-import com.bayu.jwt.asymmetric.dto.RegistrationRequest;
-import com.bayu.jwt.asymmetric.dto.RegistrationResponse;
+import com.bayu.jwt.asymmetric.dto.*;
 import com.bayu.jwt.asymmetric.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +21,13 @@ public class AuthController {
         RegistrationResponse registrationResponse = authService.registration(request);
         return ResponseEntity.ok()
                 .body(new ApiResponse<>(Boolean.TRUE, "Success", registrationResponse));
+    }
+
+    @PostMapping(path = "/signin")
+    public ResponseEntity<ApiResponse<AuthenticationResponse>> signIn(@RequestBody LoginRequest loginRequest) {
+        AuthenticationResponse authenticationResponse = authService.signIn(loginRequest);
+        return ResponseEntity.ok()
+                .body(new ApiResponse<>(Boolean.TRUE, "Success", authenticationResponse));
     }
 
 }
