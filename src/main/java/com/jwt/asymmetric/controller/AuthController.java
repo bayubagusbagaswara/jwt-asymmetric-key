@@ -23,7 +23,7 @@ public class AuthController {
                 .body(new ApiResponse<>(Boolean.TRUE, "Success", registrationResponse));
     }
 
-    @PostMapping(path = "/signin")
+    @PostMapping(path = "/sign-in")
     public ResponseEntity<ApiResponse<AuthenticationResponse>> signIn(@RequestBody LoginRequest loginRequest) {
         AuthenticationResponse authenticationResponse = authService.signIn(loginRequest);
         return ResponseEntity.ok()
